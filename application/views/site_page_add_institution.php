@@ -171,7 +171,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="span3">
                 <div class="form__group">
-                  <label for="suscriptor_email_check">Confirmar correo de la institución*</label>
+                  <label for="suscriptor_email_check">Confirmar tu correo*</label>
                   <input type="text" id="suscriptor_email_check" class="uppercase" name="suscriptor_email_check" data-validation="email check_suscriptor_email required" data-validation-error-msg="Este correo debe coincidir con el ingresado."/>
                 </div>
               </div>

@@ -4,7 +4,7 @@ if(! defined('ENVIRONMENT') ){
 	
 	$domain = strtolower($_SERVER['HTTP_HOST']);
 
-	if ($domain == 'mapasolidario.org.ar' && $domain == 'www.mapasolidario.org.ar') {
+	if ($domain == 'mapasolidario.org.ar' || $domain == 'www.mapasolidario.org.ar') {
 		define('ENVIRONMENT', 'production');
 	}else if($domain == 'stage.mapasolidario.org.ar'){
 		define('ENVIRONMENT', 'stage');

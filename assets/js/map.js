@@ -223,6 +223,7 @@ function onLocationFound(e) {
 
 function onLocationError(e) {
     console.log(e.message);
+	alert("Ocurrió un error, estamos trabajando para solucionarlo.");
 }
 
 /**
