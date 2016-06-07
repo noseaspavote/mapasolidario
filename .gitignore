@@ -1,4 +1,5 @@
 */config/production
+*/config/development
 */config/stage
 */logs/log-*.php
 !*/logs/index.html
