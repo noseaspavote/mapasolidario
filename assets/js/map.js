@@ -25,6 +25,18 @@ $(document).ready(function() {
 		//loadMarkers();
 		return false;
 	});
+	
+	//Share pop up initialization
+	$('#popup-share').popup({
+		background:false
+	});
+		
+	//share plug in init
+	$("#popup-share-div").jsSocials({
+			showLabel: false,
+    		showCount: false,
+            shares: ["email", "twitter", "facebook", "googleplus", "pinterest", "whatsapp"]
+        });
 
 	//map initialization
 	initMap();		
@@ -79,8 +91,30 @@ function initMap() {
 	
 	//init
 	mapCanvas = L.map('map-canvas',{
-		visualClickEvents: 'dblclick'
+		visualClickEvents: 'dblclick',
+		contextmenu: true,
+		contextmenuWidth: 140,
+		contextmenuItems: [{
+			text: '<i class="fa fa-share-alt" aria-hidden="true"></i> Compartir',
+			callback: shareCoordinates
+		}, {
+			text: '<i class="fa fa-crosshairs" aria-hidden="true"></i> Centrar aquí',
+			callback: centerMap
+		}]
 	}).setView([initLat, initLng], initZoom);
+	
+	mapCanvas.on('popupopen', function(e) {
+		$("#maker-share").jsSocials({
+			showLabel: false,
+    		showCount: false,
+            shares: ["email", "twitter", "facebook", "googleplus", "pinterest", "whatsapp"]
+        });
+		$("#maker-share").jsSocials("option", "url", 'http://mapasolidario.org.ar/?@=' + $("#maker-alias").val());
+	});
+	
+	mapCanvas.on('popupclose', function(e) {
+		$("#maker-share").jsSocials("destroy");
+	});
 	
 	//if ll isset, point to
 	if(position.length==2){
@@ -115,6 +149,26 @@ function initMap() {
 		loadMarkers();
 	})
 }
+
+/**
+ * Context menu functions
+ */
+function shareCoordinates (e) {
+	var lat = e.latlng['lat'];
+	var lng = e.latlng['lng'];
+	var url = 'http://mapasolidario.org.ar/?ll=' + encodeURI(lat) + ','+ encodeURI(lng);
+	
+	var clipboard = new Clipboard('#popup-share-copy-link');
+	console.log(clipboard);
+	$("#popup-share-div").jsSocials("option", "url", url);
+	$('#popup-share-input').val(url);
+	$('#popup-share').popup('show');
+}
+
+function centerMap (e) {
+    mapCanvas.panTo(e.latlng);
+}
+
 
 /**
  * Function to load the categories in the sidebar.
@@ -167,8 +221,9 @@ function setupMarker(feature, layer){
 		content = content + '<a href="' + moreLink + '" title="Conocer más">[conocer más]</a>';
 		content = content + '</span>';
 		content = content + '<br />';
+		content = content + '<div id="maker-share"></div>';
+		content = content + '<input type="hidden" id="maker-alias" value="' + feature.properties.alias + '"/>';
 		content = content + '</div>';
-		
 	layer.bindPopup(content);
 	
 	//open popup info by default

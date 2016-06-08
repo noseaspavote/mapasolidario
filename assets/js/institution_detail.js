@@ -4,6 +4,13 @@ var _mapObj;
 
 $(document).ready(function() {
 	
+	//share plug in init
+	$("#share-div").jsSocials({
+			showLabel: false,
+    		showCount: false,
+            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+        });
+	
 	$.formUtils.addValidator({
 		  name : 'check_mail',
 		  validatorFunction : function(value, $el, config, language, $form) {

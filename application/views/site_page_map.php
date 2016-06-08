@@ -92,5 +92,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     $this->load->view('site_html_footer_scripts',$data);
   ?>
   </div>
+  <div id="popup-share" class="article" style="background-color:#FFF; padding: 15px;">
+    <h4><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir ubicación</h4>
+      <div class="row">
+        <div class="span12">
+            <article class="article">
+              <div class="article__body">
+                <div class="form__group">
+                  <input type="text" id="popup-share-input" class="uppercase" value=""/>
+                </div>
+                <div id="popup-share-div"></div>
+              </div>
+            </article>
+        </div>
+      </div>
+      <span style="float:right;"><a href="#" title="Copiar enlace" id="popup-share-copy-link"  data-clipboard-target="#popup-share-input"><i class="fa fa-files-o" aria-hidden="true"></i></a></span>
+  </div>
+  
+  
 </body>
 </html>

@@ -15,15 +15,16 @@ if(isset($customTitle))
 <meta name="description">
 <link href="<?=base_url()?>assets/media/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <link href="<?=base_url()?>assets/css/style.css?v=<?=$this->mapasoli->scriptVer()?>" rel="stylesheet" type="text/css" media="all">
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<link rel="stylesheet" href="<?=base_url()?>assets/plugins/leaflet/leaflet.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" />
+<link href="<?=base_url()?>assets/plugins/font-awesome/css/font-awesome.min.css?v=<?=$this->mapasoli->scriptVer()?>" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="<?=base_url()?>assets/plugins/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?=base_url()?>assets/plugins/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?=base_url()?>assets/plugins/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?=base_url()?>assets/plugins/geojsonAutocomplete/geojsonautocomplete.min.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?=base_url()?>assets/plugins/visualclick/L.VisualClick.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" />
-<!--link rel="stylesheet" href="<?=base_url()?>assets/plugins/sidebar/leaflet-sidebar.min.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" /-->
+<link rel="stylesheet" href="<?=base_url()?>assets/plugins/contextMenu/leaflet.contextmenu.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/plugins/jssocials/jssocials.min.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?=base_url()?>assets/plugins/jssocials/jssocials-theme-flat.min.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" />
 <meta property="og:title" content="Mapa solidario">
 <meta property="og:description">
 <meta property="og:type" content="website">

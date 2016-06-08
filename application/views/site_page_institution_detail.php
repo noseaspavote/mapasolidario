@@ -63,6 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   ?>
               </div>
             </article>
+            <center><p><div id="share-div"></div></p></center>
           </div>
           <div class="span5">
             <?php if($institution['email']!='') { ?>
