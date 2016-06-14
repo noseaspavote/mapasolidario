@@ -15,6 +15,8 @@ if(isset($customTitle))
 <meta name="description">
 <link href="<?=base_url()?>assets/media/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <link href="<?=base_url()?>assets/css/style.css?v=<?=$this->mapasoli->scriptVer()?>" rel="stylesheet" type="text/css" media="all">
+<link href="<?=base_url()?>assets/css/desktop.css?v=<?=$this->mapasoli->scriptVer()?>" rel="stylesheet" type="text/css" media="screen and (min-width:600px)">
+<link href="<?=base_url()?>assets/css/mobile.css?v=<?=$this->mapasoli->scriptVer()?>" rel="stylesheet" type="text/css" media="screen and (max-width:599px)">
 <link rel="stylesheet" href="<?=base_url()?>assets/plugins/leaflet/leaflet.css?v=<?=$this->mapasoli->scriptVer()?>" type="text/css" media="screen" />
 <link href="<?=base_url()?>assets/plugins/font-awesome/css/font-awesome.min.css?v=<?=$this->mapasoli->scriptVer()?>" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="<?=base_url()?>assets/plugins/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />

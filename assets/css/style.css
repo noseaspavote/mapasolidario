@@ -4408,12 +4408,6 @@ body {
     cursor: pointer;
 }
 
-@media only screen and (max-width:599px) {
-    .header__donar {
-        display: none
-    }
-}
-
 .header__donar:hover {
     text-decoration: none;
     color: #fff;

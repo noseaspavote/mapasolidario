@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <div id="fb-root"></div>
 <header class="header">
+	<i class="fa fa-bars" aria-hidden="true"></i>
 	<div class="header__brand"><a href="<?=site_url('./');?>">Mapa <strong>solidario</strong></a></div>
 	<nav>
 		<a href="<?php echo site_url('como-ayudar');?>" class="header__donar">Como ayudar</a>

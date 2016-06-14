@@ -1,9 +1,9 @@
 		//si es pagina web común saco los botones de redes
 console.log("no es mobile");
-		jQuery(".redes").hide();
-		$( ".header__menu" ).hide();
+		//jQuery(".redes").hide();
+		//$( ".header__menu" ).hide();
 
-		
+
 		/*agregar loader con el logo de no seas pavote*/
 		function onReady(callback) {
 		    var intervalID = window.setInterval(checkReady, 1000);

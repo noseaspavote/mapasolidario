@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="loader"></div>
   <div id="container">
     <?php $this->load->view('site_html_nav'); ?>
-    <div id="searchContainer"></div> 
+    <div id="searchContainer"></div>
     <div id="map-canvas"></div>
   <aside class="sidebar">
     <form class="form form--search">
@@ -60,6 +60,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </li>
     </ul>
     <div align="center" ><a href="#" onclick="setAllCategories(); return false;">marcar todas</a></div>
+
+    <nav>
+  		<a href="<?php echo site_url('como-ayudar');?>" class="header__donar">Como ayudar</a>
+  	  <ul class="nav header__nav">
+  		<li><a href="<?php echo site_url('./');?>">Mapa</a>
+  		</li>
+  		<li><a href="<?php echo site_url('el-proyecto');?>">El proyecto</a>
+  		</li>
+  		<li><a href="<?php echo site_url('agregar-institucion');?>">Agregar institución</a>
+  		</li>
+  		<li><a href="<?php echo site_url('contacto');?>">Contacto</a>
+  		</li>
+  	  </ul>
+  	</nav>
   </aside>
   <!-- script templates-->
   <script id="category-template" type="text/x-jquery-tmpl">
@@ -88,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
   <!-- script references-->
   <?php
-    $data = array('view' => 'map'); 
+    $data = array('view' => 'map');
     $this->load->view('site_html_footer_scripts',$data);
   ?>
   </div>
@@ -108,7 +122,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       <span style="float:right;"><a href="#" title="Copiar enlace" id="popup-share-copy-link"  data-clipboard-target="#popup-share-input"><i class="fa fa-files-o" aria-hidden="true"></i></a></span>
   </div>
-  
-  
+
+
 </body>
 </html>
