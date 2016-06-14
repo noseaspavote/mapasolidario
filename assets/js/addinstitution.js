@@ -88,6 +88,7 @@ $(document).ready(function() {
 		});
   
 		$.validate({
+    		 modules : 'html5',
 			 onSuccess : function() {
 				 $('#btnSubmit').attr('disabled','disabled');
 				 return true;

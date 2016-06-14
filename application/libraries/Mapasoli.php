@@ -13,7 +13,7 @@ class Mapasoli {
     /**
      * Js and css scripts versioning
      */
-    const SCRIPT_VER = '1.3';
+    const SCRIPT_VER = '1.04';
     const SCRIPT_MIN = '';
     
     /**

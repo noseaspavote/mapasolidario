@@ -24,6 +24,9 @@ switch($view){
         echo '<script type="text/javascript" src="' . site_url() . 'assets/plugins/clipboard/clipboard.min.js?v=' . $this->mapasoli->scriptVer() .'"></script>';        
         echo '<script type="text/javascript" src="' . site_url() . 'assets/js/map' . $this->mapasoli->scriptMin() . '.js?v=' . $this->mapasoli->scriptVer() . '"></script>';
         ?>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcTKVf0fqgaUmeNKQe0W2DJR_n7bpILZg">
+        </script>
         <script>
             //tengo que cargar el js para mobile
             if($(window).width()< 600){
@@ -35,7 +38,7 @@ switch($view){
         <?php
         break;    
     case 'add_institution':
-        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.1/jquery.form-validator.min.js"></script>';
+        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.20/jquery.form-validator.min.js"></script>';
         echo '<script src="https://www.google.com/recaptcha/api.js?hl=es"></script>';
         echo '<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>';
         echo '<script type="text/javascript" src="' . site_url() . 'assets/plugins/geocoder/Control.Geocoder.js?v=' . $this->mapasoli->scriptVer(). '"></script>';

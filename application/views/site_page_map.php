@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <article class="article">
               <div class="article__body">
                 <div class="form__group">
-                  <input type="text" id="popup-share-input" class="uppercase" value=""/>
+                  <input type="hidden" id="popup-share-input" class="uppercase" value=""/>
                 </div>
                 <div id="popup-share-div"></div>
               </div>

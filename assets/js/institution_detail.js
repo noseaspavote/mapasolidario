@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$("#share-div").jsSocials({
 			showLabel: false,
     		showCount: false,
-            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+            shares: ["email", "twitter", "facebook", "pinterest", "whatsapp"]
         });
 	
 	$.formUtils.addValidator({

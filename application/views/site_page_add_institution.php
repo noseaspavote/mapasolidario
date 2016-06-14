@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="form__group">
               <div class="span6">
                 <label for="alias">Alias (Identificará a la institución) *</label>
-                <input type="text" id="alias" name="alias" class="uppercase" data-validation="unique_alias length" data-validation-length="min4"/>
+                <input type="text" id="alias" name="alias" class="uppercase" pattern="^([a-zA-Z0-9)$" data-validation="unique_alias length" data-validation-length="min4"/>
                 <input type="hidden" id="alias_check" name="alias_check"/>
               </div>
               <div class="span6">

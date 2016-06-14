@@ -30,12 +30,19 @@ $(document).ready(function() {
 	$('#popup-share').popup({
 		background:false
 	});
+
+	//set share defaults
+	jsSocials.setDefaults("twitter", {
+		via: "mapasolidario",
+		hashtags: "SabesQueAyudas"
+	});
 		
 	//share plug in init
 	$("#popup-share-div").jsSocials({
 			showLabel: false,
     		showCount: false,
-            shares: ["email", "twitter", "facebook", "googleplus", "pinterest", "whatsapp"]
+			text: "",
+            shares: ["email", "twitter", "facebook", "pinterest", "whatsapp"]
         });
 
 	//map initialization
@@ -107,7 +114,8 @@ function initMap() {
 		$("#maker-share").jsSocials({
 			showLabel: false,
     		showCount: false,
-            shares: ["email", "twitter", "facebook", "googleplus", "pinterest", "whatsapp"]
+    		text: "",
+            shares: ["email", "twitter", "facebook", "pinterest", "whatsapp"]
         });
 		$("#maker-share").jsSocials("option", "url", 'http://mapasolidario.org.ar/?@=' + $("#maker-alias").val());
 	});
@@ -264,21 +272,21 @@ function loadMarkers(){
 
 /**
  * Function to get current position of the user
+ * Uses Google Api, because Leaflet needs certificate from Chrome
  */
 function useCurrentLocation(){
-	mapCanvas.on('locationfound', onLocationFound);
-	mapCanvas.on('locationerror', onLocationError);
-	mapCanvas.locate({setView: true, maxZoom: 16});
-}
-
-function onLocationFound(e) {
-    L.marker(e.latlng, {icon: _turkeyIcon}).addTo(mapCanvas)
-        .bindPopup("<b>Estás aquí!</b>").openPopup();
-}
-
-function onLocationError(e) {
-    console.log(e.message);
-	alert("Ocurrió un error, estamos trabajando para solucionarlo.");
+	if(navigator.geolocation) {
+		browserSupportFlag = true;
+		navigator.geolocation.getCurrentPosition(function(position) {
+			mapCanvas.setView([position.coords.latitude, position.coords.longitude], 14);
+			L.marker([position.coords.latitude, position.coords.longitude], {icon: _turkeyIcon}).addTo(mapCanvas)
+        		.bindPopup("<b>Estás aquí!</b>").openPopup();
+		}, function() {
+			handleNoGeolocation(browserSupportFlag);
+		});
+	}else {
+		alert("Ocurrió un error, estamos trabajando para solucionarlo.");
+	}
 }
 
 /**
