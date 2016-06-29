@@ -1,0 +1,48 @@
+#map-canvas {
+  left: 0;
+  bottom: 58px;
+}
+.header__donar,
+.redes {
+  display: none;
+}
+
+.sidebar {
+  overflow: auto;
+  left: -272px;
+  background: #fff;
+  z-index: 10000;
+  bottom: 58px;
+  transition: all 500ms ease;
+}
+.header .fa-bars {
+  font-size: 23px;
+  padding: 14px;
+  background: #064a60;
+  color: #fff;
+  float: left;
+}
+
+.sidebar .header__nav,
+.sidebar .header__donar,
+.sidebar nav {
+  display: block;
+}
+.sidebar .header__donar {
+  margin: 18px;
+  float: none;
+}
+.sidebar .nav li {
+  float: none;
+  margin-left: 4px;
+}
+.body footer {
+  width: 100%;
+}
+.sidebar.active {
+  left: 0;
+}
+.header__brand {
+  width: auto;
+  float: none;
+}

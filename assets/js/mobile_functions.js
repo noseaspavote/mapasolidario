@@ -1,5 +1,9 @@
 /* LO QUE VIENE ACÁ ES PORQUE LA ANCHURA ES MENOR A 600 PX*/
 console.log("es mobile");
+$('.header').click(function(e){
+    e.preventDefault();
+    $('.sidebar').toggleClass('active');
+});
 
 /*funciones de css
 jQuery('.form--search').css("background-color","#8260C8");
@@ -41,12 +45,12 @@ onReady(function () {
 
 
 //saco la imagen de las manos
-sacarManitos();
-sacarFooter();
+//sacarManitos();
+//sacarFooter();
 
 //al mapa siempre lo pongo en left 0px,
 //para que no tenga que llamar funciones de jquery cada vez que hagan click
-$("#map-canvas").css("left","0px");
+//$("#map-canvas").css("left","0px");
 
 //función de la solapa Menú
 var click_menu=$(".header__menu" ).click();
@@ -79,13 +83,13 @@ $("#map-canvas").click(function(){
 	}
 });
 
-$(".redes").css("position","absolute");
+/*$(".redes").css("position","absolute");
 $(".redes").css("left","32%");
 $(".redes").css("right","0p	x");
 $(".redes").css("bottom","0px");
 $(".redes").css("height","9%");
 $(".redes").css("z-index","0");
-$(".redes a").css("border-radius","20px");
+$(".redes a").css("border-radius","20px");*/
 
 
 
